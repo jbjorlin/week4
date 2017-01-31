@@ -29,17 +29,20 @@ window.getDeck = function() {
 }
 // END DO NOT CHANGE CODE
 
+  var randDeck = getDeck()
+  randDeck.shuffle()
+
 $(function() {
 
   $(".btn").on("click", function(event) {
     event.preventDefault()
 
 
-  $('#c1').attr("src", "http://golearntocode.com/images/cards/" + getDeck()[3] +'.png')
-  $('#c2').attr("src", "http://golearntocode.com/images/cards/" + getDeck()[20] +'.png')
-  $('#c3').attr("src", "http://golearntocode.com/images/cards/" + getDeck()[12] +'.png')
-  $('#c4').attr("src", "http://golearntocode.com/images/cards/" + getDeck()[4] +'.png')
-  $('#c5').attr("src", "http://golearntocode.com/images/cards/" + getDeck()[32] +'.png')
+  $('#c1').attr("src", "http://golearntocode.com/images/cards/" + randDeck[1]+'.png')
+  $('#c2').attr("src", "http://golearntocode.com/images/cards/" + randDeck[2] +'.png')
+  $('#c3').attr("src", "http://golearntocode.com/images/cards/" + randDeck[3] +'.png')
+  $('#c4').attr("src", "http://golearntocode.com/images/cards/" + randDeck[4] +'.png')
+  $('#c5').attr("src", "http://golearntocode.com/images/cards/" + randDeck[5] +'.png')
 
   //  http://golearntocode.com/images/cards/5_of_diamonds.png
 
